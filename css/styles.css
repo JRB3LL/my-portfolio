@@ -44,20 +44,34 @@ main.page-info {
 
 .top-left {
   height: 200px;
-  width: 200px;
+  width: 50%;
   max-width: 100%;
+  margin: 0;
+  margin-left: 50px;
 }
 
 div.quote .top-left {
   display: grid;
-  font-family: 'Delicious Handrawn', cursive;
-  
+  font-family: 'Delicious Handrawn', cursive;  
+}
+
+.top-left h2 {
+  margin: 0;
+  margin-top: 16px;
+}
+
+div.quote {
+  display: flex;
+  flex-direction: column;
 }
 
 .bottom-right {
   height: 200px;
-  width: 200px;
+  width: 50%;
   max-width: 100%;
+  align-self: flex-end;
+  margin: 0;
+  margin-right: 20px;
 }
 
 div.quote .bottom-right {
@@ -65,14 +79,25 @@ div.quote .bottom-right {
   font-family: 'Delicious Handrawn', cursive;
 }
 
+.bottom-right h2 {
+  margin: 0;
+}
+
 div.about-me {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: end;
+  margin-right: 50px;
+}
+
+.about-me img {
+  height: 150px;
+  width: 150px;
+  border-radius: 75px;
 }
 
 .about-me p{
-  height: 250px;
+  height: 190px;
   width: 150px;
   border-radius: 5px;
   background-color: aliceblue;
@@ -82,43 +107,93 @@ div.about-me {
   font-family: 'Delicious Handrawn', cursive;
 }
 
-.about-me img {
-  height: 150px;
+.about-me .button {
+  height: 30px;
   width: 150px;
-  border-radius: 75px;
+  border: 2px solid aliceblue;
+  border-radius: 5px;
+  text-align: center;
+  color: aliceblue;
+  text-decoration-line: none;
+  text-justify: auto;
 }
 
 .container {
-display: flex;
-flex-direction: column;
+display: grid;
+grid-template-rows: auto;
 }
 
 .pro-1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   padding: 50px;
+  color: aliceblue;
+}
+
+.pro-1 .button {
+  color: aliceblue;
+  text-align: center;
+  text-decoration-line: none;
+}
+
+.pro-1 p {
+  margin-right: 30px;
 }
 
 .pro-2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   padding: 50px;
+  color: aliceblue;
+}
+
+.pro-2 p {
+  margin-left: 30px;
+}
+
+.pro-2 .button {
+  color: aliceblue;
+  text-align: center;
+  text-decoration-line: none;
 }
 
 .pro-3 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: space-between;
-  padding: 50px;  
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 50px;
+  color: aliceblue; 
 }
 
-a.button {
-  padding: 50px 120px;
+.pro-3 p {
+  margin-right: 30px;
+}
+
+.pro-3 .button {
+  color: aliceblue;
+  text-align: center;
+  text-decoration-line: none;
+}
+
+.projects a.button {
+  width: 100%;
+  padding: 50px 0px;
   border: 2px solid aliceblue;
   border-radius: 5px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+div.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+}
+
+footer p {
+  text-align: right;
 }
