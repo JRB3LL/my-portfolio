@@ -16,7 +16,7 @@ html, body {
   font-family:'Bruno Ace', cursive;
 }
 
-.navigation .nav-link {
+.navigation .nav_link {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   color: aliceblue;
@@ -24,18 +24,18 @@ html, body {
   text-align: center;
 }
 
-div.nav-bar {
+div.nav_bar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-main.page-info {
+main.page_info {
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
 
-.top-left {
+.top_left {
   height: 200px;
   width: 50%;
   max-width: 100%;
@@ -43,12 +43,12 @@ main.page-info {
   margin-left: 50px;
 }
 
-div.quote .top-left {
+div.quote .top_left {
   display: grid;
   font-family: 'Delicious Handrawn', cursive;  
 }
 
-.top-left h2 {
+.top_left h2 {
   margin: 0;
   margin-top: 16px;
 }
@@ -58,7 +58,7 @@ div.quote {
   flex-direction: column;
 }
 
-.bottom-right {
+.bottom_right {
   height: 200px;
   width: 50%;
   max-width: 100%;
@@ -67,29 +67,29 @@ div.quote {
   margin-right: 20px;
 }
 
-div.quote .bottom-right {
+div.quote .bottom_right {
   display: grid;
   font-family: 'Delicious Handrawn', cursive;
 }
 
-.bottom-right h2 {
+.bottom_right h2 {
   margin: 0;
 }
 
-div.about-me {
+div.about_me {
   display: flex;
   flex-direction: column;
   align-items: end;
   margin-right: 50px;
 }
 
-.about-me img {
+.about_me img {
   height: 150px;
   width: 150px;
   border-radius: 75px;
 }
 
-.about-me p{
+.about_me p{
   height: 190px;
   width: 150px;
   border-radius: 5px;
@@ -100,7 +100,10 @@ div.about-me {
   font-family: 'Delicious Handrawn', cursive;
 }
 
-.about-me .button {
+.about_me .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 30px;
   width: 150px;
   border: 2px solid aliceblue;
@@ -108,7 +111,7 @@ div.about-me {
   text-align: center;
   color: aliceblue;
   text-decoration-line: none;
-  
+  font-family:'Bruno Ace', cursive;
 }
 
 .container {
@@ -116,66 +119,56 @@ div.about-me {
   grid-template-rows: auto;
 }
 
-.pro-1 {
+.pro {
   display: grid;
   grid-template-columns: 2fr 1fr;
   padding: 50px;
   color: aliceblue;
 }
 
-.pro-1 .button {
+.pro .button {
   color: aliceblue;
   text-align: center;
   text-decoration-line: none;
-}
-
-.pro-1 p {
-  margin-right: 30px;
-}
-
-.pro-2 {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  padding: 50px;
-  color: aliceblue;
-}
-
-.pro-2 p {
-  margin-left: 30px;
-}
-
-.pro-2 .button {
-  color: aliceblue;
-  text-align: center;
-  text-decoration-line: none;
-}
-
-.pro-3 {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  padding: 50px;
-  color: aliceblue; 
-}
-
-.pro-3 p {
-  margin-right: 30px;
-}
-
-.pro-3 .button {
-  color: aliceblue;
-  text-align: center;
-  text-decoration-line: none;
-}
-
-.projects a.button {
+  font-family:'Bruno Ace', cursive;
   width: 100%;
   padding: 50px 0px;
   border: 2px solid aliceblue;
   border-radius: 5px;
 }
 
-footer {
+.pro p {
+  margin: 16px 30px;
+  font-family: 'Delicious Handrawn', cursive;
+  font-size: large;
+}
+
+.pro:nth-child(even) {
+  display: flex;
+  flex-direction: row;
+}
+
+.pro:nth-child(odd) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.pro:nth-child(odd) p {
+  margin-left: 30px;
+}
+
+footer.desktop {
   display: grid;
+  visibility: visible;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  font-family:'Bruno Ace', cursive;
+  border-top: 1px solid aliceblue;
+}
+
+footer.mobile {
+  display: grid;
+  visibility: hidden;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   font-family:'Bruno Ace', cursive;
@@ -193,7 +186,7 @@ div.socials {
   gap: 25px;
 }
 
-.socials .s-link {
+.socials .s_link {
   color: aliceblue;
 }
 
@@ -202,9 +195,10 @@ footer p {
   font-size: 13px;
 }
 
+
 @media screen and (max-width: 600px) 
   {
-    main.page-info {
+    main.page_info {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -212,7 +206,7 @@ footer p {
       width: 100%;
     }
 
-    .top-left {
+    .top_left {
       display: flex;
       flex-direction: column;
       align-self: center;
@@ -222,7 +216,7 @@ footer p {
       margin: 0px;
     }
 
-    .bottom-right {
+    .bottom_right {
       display: flex;
       flex-direction: column;
       align-self: center;
@@ -232,7 +226,7 @@ footer p {
       margin: 0px;
     }
     
-    div.about-me {
+    div.about_me {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -248,7 +242,7 @@ footer p {
       width: 100%;
     }
 
-    .projects {
+    .projects_html {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -257,42 +251,48 @@ footer p {
       padding: 0;
     }
 
-    .pro-1 {
+    .pro {
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
+      padding: 50px 50px 0px 50px;
       margin: 0px;
     }
 
-    .pro-2 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .pro p {
       margin: 0;
-      padding: 0 50px;
+      padding-top: 10px;
     }
 
-    .pro-3 {
+    .pro:nth-child(even) {
       display: flex;
       flex-direction: column-reverse;
-      align-items: center;
-      margin: 0;
     }
 
-    .pro-1 p,
-    .pro-2 p,
-    .pro-3 p {
-      margin: 0;
-    }
-
-    .column div {
+    .pro:nth-child(odd) {
       display: flex;
-      justify-content: center;
+      flex-direction: column-reverse;
     }
-  }
 
+    .pro:nth-child(odd) p {
+      margin: 0;
+    }
 
-  @media screen and (max-width: 900px) 
-  {
-
+    footer.desktop {
+      display: grid;
+      visibility: hidden;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      font-family:'Bruno Ace', cursive;
+      border-top: 1px solid aliceblue;
+    }
+    
+    footer.mobile {
+      display: grid;
+      visibility: visible;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      font-family:'Bruno Ace', cursive;
+      border-top: 1px solid aliceblue;
+    }
   }
